@@ -1,0 +1,67 @@
+
+# coding: utf-8
+
+# In[12]:
+
+import agate
+
+table = agate.Table.from_csv('campuscrime.csv')
+sorted_by_murder = table.order_by('murder')
+sorted_by_murder.print_table(max_columns=2,max_rows=15)
+
+binned_burglary = table.bins('burglary', 10, 0, 100)
+binned_burglary.print_bars('burglary', width=80)
+
+
+# In[1]:
+
+import agate
+
+table = agate.Table.from_csv('campuscrime.csv')
+sorted_by_burglary = table.order_by('burglary')
+sorted_by_burglary.print_table(max_columns=2,max_rows=15)
+
+binned_burglary = table.bins('burglary', 10, 0, 100)
+binned_burglary.print_bars('burglary', width=80)
+
+
+# In[2]:
+
+import agate
+
+text_type = agate.text()
+number_type = agate.number()
+
+column_names = ['agg_aslt' , 'burglary' , 'vehicle' , 'arson']
+column_types = [text_type, number_type, numner_type]
+table = agate.table.from_csv('campuscrime.csv' , columb_names, column_types)
+
+
+# In[3]:
+
+import agate
+
+table = agate.Table.from_csv('campuscrime.csv')
+sorted_by_burglary = table.order_by('burglary').descending
+sorted_by_burglary.print_table(max_columns=2,max_rows=15)
+
+binned_burglary = table.bins('burglary', 10, 0, 100)
+binned_burglary.print_bars('burglary', width=80)
+
+
+# In[5]:
+
+import agate
+
+table = agate.Table.from_csv('campuscrime.csv')
+sorted_by_burglary = table.order_by('burglary')
+sorted_by_burglary.print_table(max_columns=2,max_rows=15)
+
+binned_burglary = table.bins('burglary', 10, 0, 100)
+binned_burglary.print_bars('burglary', width=80)
+
+
+# In[ ]:
+
+
+
